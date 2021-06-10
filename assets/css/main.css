@@ -338,14 +338,26 @@
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 980px) {
 
 				.thumbnails {
 					margin-top: 230px;
 				}
 
 				.thumbnails .box {
-					width: 100%;
+					width: 80%;
+				}
+
+			}
+
+			@media screen and (max-width: 700px) {
+
+				.thumbnails {
+					margin-top: 230px;
+				}
+
+				.thumbnails .box {
+					width: 90%;
 				}
 
 			}
@@ -582,6 +594,12 @@
 
 		.box .inner {
 			padding: 1.5em;
+			width: 100% !important;
+		}
+
+		.box .inner p {
+			padding-top: 5px;
+			margin-bottom: 100px;
 			width: 100% !important;
 		}
 
@@ -998,7 +1016,6 @@
 		border: 0;
 		color: #ffffff !important;
 		cursor: pointer;
-		display: inline-block;
 		font-weight: 400;
 		height: 2.85em;
 		line-height: 2.95em;
@@ -1006,6 +1023,11 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		position: absolute;
+		left: 10px;
+		right: 100px;
+		bottom: 11%;
+		width: 30px;
 	}
 
 		input[type="submit"]:hover,
@@ -1046,9 +1068,7 @@
 		input[type="button"].fit,
 		button.fit,
 		.button.fit {
-			display: block;
-			margin: 0 0 1em 0;
-			width: 100%;
+			width: 95%;
 		}
 
 		input[type="submit"].small,
@@ -1089,6 +1109,7 @@
 		button.style2,
 		.button.style2 {
 			background-color: var(--color-accent2);
+			bottom: 2%;
 		}
 
 			input[type="submit"].style2:hover,
