@@ -1,8 +1,15 @@
-/*
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("banner").style.fontSize = "8pt";
+	document.getElementById("para").style.display = "none";
+	
+  } else {
+    document.getElementById("banner").style.fontSize = "12pt";
+	document.getElementById("para").style.display = "block";
+  }
+}
 
 (function($) {
 
