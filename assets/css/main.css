@@ -8,7 +8,7 @@
     --color-comp: #6883bc;
     --color-accent: #8a307f;
 	--color-accent2: #320d3e;
-	--color-accent3: #d902ee;
+	--color-accent3: #d902ee; /* #3abc8f */
 }
 
 /* Reset */
@@ -317,7 +317,7 @@
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		margin-top: 250px;
+		margin-top: 270px;
 	}
 
 		.thumbnails .box {
@@ -328,6 +328,10 @@
 
 			@media screen and (max-width: 1280px) {
 
+				.thumbnails {
+					margin-top: 260px;
+				}
+
 				.thumbnails .box {
 					width: 45%;
 				}
@@ -336,11 +340,17 @@
 
 			@media screen and (max-width: 736px) {
 
+				.thumbnails {
+					margin-top: 230px;
+				}
+
 				.thumbnails .box {
 					width: 100%;
 				}
 
 			}
+
+
 
 /* Form */
 
@@ -549,6 +559,11 @@
 		background-color: rgba(255, 255, 255, .15);  
 		backdrop-filter: blur(5px);;
 		text-align: center;
+		transition: all .1s ease-in-out;
+	}
+
+	.box:hover {
+		transform: scale(1.05);
 	}
 
 		.box > :last-child,
@@ -606,6 +621,10 @@
 		}
 
 /* Image */
+
+	.fade {
+		transition: .5s ease;
+	}
 
 	.image {
 		border-radius: 4px;

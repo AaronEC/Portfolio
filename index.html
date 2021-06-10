@@ -9,12 +9,7 @@
 	<body id="top">
 
 			<!-- Banner -->
-			<!--
-				To use a video as your background, set data-video to the name of your video without
-				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-				formats to work correctly.
-			-->
-				<section id="banner" data-video="images/banner">
+				<section id="banner">
 					<div class="inner">
 						<header>
 							<h1>Aaron Cardwell</h1>
@@ -37,12 +32,20 @@
 						<div class="thumbnails">
 
 							<div class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit">
+									<div class="images-rotation"
+									data-images='["images/TT_pic01.jpg", "images/TT_pic02.jpg", "images/TT_pic03.jpg", "images/TT_pic01.jpg"]'>
+										<img src="images/TT_pic01.jpg" alt="">
+								</div>
+								</a>
 								<div class="inner">
-									<h3>Nascetur nunc varius commodo</h3>
+									<h3>Table Tennis League Organiser</h3>
+									<img src="https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a">
+									<img src="https://img.shields.io/badge/Editor-Netbeans-informational?style=flat&logo=apache-netbeans-ide&logoColor=white&color=2bbc8a">
+									<img src="https://img.shields.io/badge/Tools-JavaFX-informational?style=flat&logo=java&logoColor=white&color=2bbc8a">
 									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Video Demo</a>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">GitHub</a>
+									<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub</a>
 								</div>
 							</div>
 
@@ -50,6 +53,8 @@
 								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Nascetur nunc varius commodo</h3>
+									<img src="https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=2bbc8a">
+									
 									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Video Demo</a>
 									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">GitHub</a>
@@ -124,6 +129,11 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<!-- Mouseover gallery script plugin https://github.com/sladex/images-rotation -->
+		<script src="assets/js/jquery.images-rotation.js"></script>
+		<script>
+			$('.images-rotation').imagesRotation();
+		  </script>
 
 	</body>
 </html>
