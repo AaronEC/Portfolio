@@ -321,6 +321,7 @@
 	}
 
 		.thumbnails .box {
+			border-radius: 10px;
 			margin: 0 1em 2em 1em;
 			width: 30%;
 			box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
@@ -589,7 +590,7 @@
 		}
 
 		.box .image img {
-			border-radius: 4px 4px 0 0;
+			border-radius: 10px 10px 0 0;
 		}
 
 		.box .inner {
@@ -598,7 +599,8 @@
 		}
 
 		.box .inner p {
-			padding-top: 5px;
+			padding: 1em;
+			padding-bottom: 2em;
 			margin-bottom: 100px;
 			width: 100% !important;
 		}
