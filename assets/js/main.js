@@ -6,10 +6,13 @@ function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("banner").style.fontSize = "8pt";
 	document.getElementById("para").style.display = "none";
-	
+	document.getElementById("chevron").style.display = "none";
+	document.getElementById("projects-label").style.display = "none";
   } else {
     document.getElementById("banner").style.fontSize = "12pt";
 	document.getElementById("para").style.display = "block";
+	document.getElementById("chevron").style.display = "block";
+	document.getElementById("projects-label").style.display = "block";
   }
 }
 
