@@ -317,20 +317,21 @@
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		margin-top: 270px;
+		margin-top: 300px;
 	}
 
 		.thumbnails .box {
 			border-radius: 10px;
 			margin: 0 1em 2em 1em;
 			width: 30%;
+			max-width: 400px;
 			box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
 		}
 
 			@media screen and (max-width: 1280px) {
 
 				.thumbnails {
-					margin-top: 260px;
+					margin-top: 300px;
 				}
 
 				.thumbnails .box {
@@ -342,7 +343,7 @@
 			@media screen and (max-width: 980px) {
 
 				.thumbnails {
-					margin-top: 230px;
+					margin-top: 260px;
 				}
 
 				.thumbnails .box {
@@ -577,6 +578,7 @@
 
 	.box:hover {
 		transform: scale(1.05);
+		box-shadow: 0px 0px 10px 10px rgba(117, 142, 255, 0.1);
 	}
 
 		.box > :last-child,
@@ -935,18 +937,19 @@
 .headbar-social {
     margin: 0;
     padding: 0;
+	padding-bottom: 5px;
 }
 
 .headbar-social ul {
     margin: 0;
-    padding: 1%;
+    padding: 10px;
 }
 
 .headbar-social li {
 	text-align: center;
     width: 100px;
     margin-bottom: 3px!important;
-	background-color: rgba(255, 255, 255, .3);  
+	background-color: rgba(255, 255, 255, .2);  
 	backdrop-filter: blur(5px);
     border-radius: 10px;
     display: inline-block;
@@ -985,7 +988,9 @@
 	color: var(--color-accent);
 	margin-top:0;
 	padding-top:5px;
+	transition: all .1s ease-in-out;
 }
+
 
 .headbar-social a span{
 	color:white;
@@ -995,11 +1000,27 @@
 	text-transform:uppercase;
 	font-family:'Josefin Sans';
 	letter-spacing:1px;
+	transition: all .1s ease-in-out;
 }
 
-.headbar-social li:hover {
-	transform: scale(1.03);
-}
+	.headbar-social li:hover {
+		box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, .2);
+		z-index: 10;
+		transform: scale(1.1);
+		background-color: rgba(255, 255, 255, .9);  
+	}
+
+
+.headbar-social li:hover i.fa-user{color: var(--color-accent2);}
+.headbar-social li:hover #about{color: var(--color-accent2);}
+.headbar-social li:hover i.fa-linkedin{color: var(--color-accent2);}
+.headbar-social li:hover #linkedin{color: var(--color-accent2);}
+.headbar-social li:hover i.fa-github{color: var(--color-accent2);}
+.headbar-social li:hover #github{color: var(--color-accent2);}
+.headbar-social li:hover i.fa-file{color: var(--color-accent2);}
+.headbar-social li:hover #resume{color: var(--color-accent2);}
+.headbar-social li:hover i.fa-envelope{color: var(--color-accent2);}
+.headbar-social li:hover #email{color: var(--color-accent2);}
 
 .headbar-social a:hover i.fa-facebook { color: #FF0000; }
 .headbar-social a:hover i.fa-twitter { color:#00ABE3 }

@@ -4,7 +4,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("banner").style.fontSize = "8pt";
+    document.getElementById("banner").style.fontSize = "10pt";
 	document.getElementById("para").style.display = "none";
 	document.getElementById("chevron").style.display = "none";
 	document.getElementById("projects-label").style.display = "none";
