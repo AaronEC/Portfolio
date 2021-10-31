@@ -5,7 +5,7 @@
 /* Variables */
 :root {
     --color-main: #1e2761;
-    --color-comp: #6883bc;
+    --color-comp: #312646;
     --color-accent: #8a307f;
 	--color-accent2: #320d3e;
 	--color-accent3: #d902ee; /* #3abc8f */
@@ -1332,7 +1332,8 @@
 		-ms-justify-content: center;
 		justify-content: center;
 		padding: 0;
-		background-image: url("../../images/BannerTemp.jpg");
+		background-color: var(--color-comp);
+		/* background-image: url("../../images/BannerTemp.jpg"); */
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
