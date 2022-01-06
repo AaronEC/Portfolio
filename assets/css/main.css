@@ -317,7 +317,7 @@
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		margin-top: 300px;
+		margin-top: 400px;
 	}
 
 		.thumbnails .box {
@@ -331,7 +331,7 @@
 			@media screen and (max-width: 1280px) {
 
 				.thumbnails {
-					margin-top: 300px;
+					margin-top: 400px;
 				}
 
 				.thumbnails .box {
@@ -343,7 +343,7 @@
 			@media screen and (max-width: 980px) {
 
 				.thumbnails {
-					margin-top: 260px;
+					margin-top: 380px;
 				}
 
 				.thumbnails .box {
@@ -355,7 +355,7 @@
 			@media screen and (max-width: 700px) {
 
 				.thumbnails {
-					margin-top: 230px;
+					margin-top: 360px;
 				}
 
 				.thumbnails .box {
@@ -1332,8 +1332,8 @@
 		-ms-justify-content: center;
 		justify-content: center;
 		padding: 0;
-		background-color: var(--color-comp);
-		/* background-image: url("../../images/BannerTemp.jpg"); */
+		/* background-color: var(--color-comp); */
+		background-image: url("../../images/BannerTemp.jpg");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
