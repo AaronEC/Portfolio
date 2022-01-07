@@ -6,7 +6,7 @@
 :root {
     --color-main: #437fc7;
     --color-comp: #6daffe;
-    --color-accent: #5F008F;
+    --color-accent: #10855c;
 	--color-accent2: #4a6163;
 	--color-accent3: #b9732f; /* #3abc8f */
 }
@@ -603,8 +603,6 @@
 
 		.box .inner p {
 			padding: 1em;
-			padding-bottom: 2em;
-			margin-bottom: 100px;
 			width: 100% !important;
 		}
 
