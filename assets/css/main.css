@@ -122,7 +122,7 @@
 		@media screen and (max-width: 980px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -130,7 +130,7 @@
 		@media screen and (max-width: 736px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -138,7 +138,7 @@
 		@media screen and (max-width: 480px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -325,7 +325,7 @@
 			/* border-radius: 10px; */
 			margin: 0 1em 2em 1em;
 			width: 30%;
-			max-width: 400px;
+			max-width: 325px;
 			background-color: var(--color-accent3);
 			/* box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7); */
 		}
@@ -349,7 +349,7 @@
 				}
 
 				.thumbnails .box {
-					width: 80%;
+					width: 60%;
 				}
 
 			}
@@ -569,16 +569,10 @@
 
 /* Box */
 
-	.pvid {
-		width: 100%;  
-		height: 30%;
-	}
-
 	.box {
 		/* border-radius: 4px; */
-		margin-bottom: 2em;
+		box-sizing: border-box;
 		background-color: rgba(255, 255, 255, .15);  
-		backdrop-filter: blur(5px);;
 		text-align: center;
 		transition: all .1s ease-in-out;
 	}
@@ -603,13 +597,14 @@
 		}
 
 		.box .inner {
-			padding: 1.5em;
+			padding: 0.5em;
 			width: 100% !important;
 		}
 
 		.box .inner p {
-			padding: 1em;
+			padding: 0.5em;
 			width: 100% !important;
+			margin: 0px;
 		}
 
 			@media screen and (max-width: 480px) {
@@ -648,6 +643,7 @@
 		}
 
 /* Image */
+
 
 	.fade {
 		transition: .5s ease;
@@ -1107,7 +1103,7 @@
 
 /* Button */
 
-	input[type="submit"],
+input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -1122,21 +1118,17 @@
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: var(--color-accent);
 		/* border-radius: 4px; */
-		border: 0;
 		color: #ffffff !important;
 		cursor: pointer;
 		font-weight: 400;
-		height: 2.85em;
-		line-height: 2.95em;
-		padding: 0 1.5em;
+		padding: 0.75em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
-		position: absolute;
-		left: 10px;
-		right: 100px;
-		bottom: 11%;
-		width: 30px;
+		position: relative;
+		width:100%;
+		display:block;
+		margin: 0;
 	}
 
 		input[type="submit"]:hover,
@@ -1177,7 +1169,7 @@
 		input[type="button"].fit,
 		button.fit,
 		.button.fit {
-			width: 95%;
+			width: 100%;
 		}
 
 		input[type="submit"].small,
