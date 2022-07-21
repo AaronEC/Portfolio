@@ -1172,8 +1172,8 @@ input[type="submit"],
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: var(--color-comp);
-			color: black;
+			background-color: var(--color-accent3);
+			color: black !important;
 		}
 
 		input[type="submit"]:active,
