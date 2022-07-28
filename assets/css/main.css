@@ -368,7 +368,7 @@
 			@media screen and (max-width: 736px) {
 
 				.thumbnails {
-					margin-top: 300px;
+					margin-top: 25em;
 				}
 
 				.thumbnails .box {
@@ -1519,9 +1519,17 @@ input[type="submit"],
 		}
 		
 		div.hidden {
-		height: 0;
+		height: 10px;
 		transition: all linear 0.25s;
 		overflow: hidden;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			div.toggle-div {
+				height: 167px;
+			}
+
 		}
 
 /* Main */
