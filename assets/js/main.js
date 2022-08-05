@@ -1,4 +1,3 @@
-
 /* Header resizing */
 window.onscroll = function() {scrollFunction()};
 

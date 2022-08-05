@@ -27,18 +27,32 @@
 		$(document).ready(function(){
 			/* Get iframe src attribute value i.e. YouTube video url
 			and store it in a variable */
-			var url = $("#cartoonVideo").attr('src');
+			var url01 = $("#yVideo01").attr('src');
+			var url02 = $("#yVideo02").attr('src');
+			var url03 = $("#yVideo03").attr('src');
 			
 			/* Assign empty url value to the iframe src attribute when
 			modal hide, which stop the video playing */
-			$("#myModal").on('hide.bs.modal', function(){
-				$("#cartoonVideo").attr('src', '');
+			$("#VideoModal01").on('hide.bs.modal', function(){
+				$("#yVideo01").attr('src', '');
+			});
+			$("#VideoModal02").on('hide.bs.modal', function(){
+				$("#yVideo02").attr('src', '');
+			});
+			$("#VideoModal03").on('hide.bs.modal', function(){
+				$("#yVideo03").attr('src', '');
 			});
 			
 			/* Assign the initially stored url back to the iframe src
 			attribute when modal is displayed again */
-			$("#myModal").on('show.bs.modal', function(){
-				$("#cartoonVideo").attr('src', url);
+			$("#VideoModal01").on('show.bs.modal', function(){
+				$("#yVideo01").attr('src', url01);
+			});
+			$("#VideoModal02").on('show.bs.modal', function(){
+				$("#yVideo02").attr('src', url02);
+			});
+			$("#VideoModal03").on('show.bs.modal', function(){
+				$("#yVideo03").attr('src', url03);
 			});
 		});
 		</script>
@@ -85,17 +99,17 @@
 				<div class="box">
 					<div class="bs-example image fit">
 						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal01" data-toggle="modal"><img id="play-img" src="images/flix/video_template.jpg"></a>
+						<a href="#VideoModal01" data-toggle="modal"><img id="play-img" src="images/flix/video_template.jpg"></a>
 						<!-- Modal HTML -->
-						<div id="myModal01" class="modal fade">
+						<div id="VideoModal01" class="modal fade">
 							<div class="modal-dialog modal-xl">
 								<div class="modal-content" style="background-color: #918b7f;">
 									<div class="modal-body">
 										<div class="embed-responsive embed-responsive-16by9">
-											<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630" src="https://www.youtube.com/embed/K8lKLx9CCwY?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											<iframe id="yVideo01" class="embed-responsive-item" width="1040" height="630" src="https://www.youtube.com/embed/K8lKLx9CCwY?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>
 										<div>
-											<a class="button fit" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub Project Link</a>
+											<a class="button fit" onclick=" window.open('https://github.com/AaronEC/UWEFlix-App', '_blank'); return false;">GitHub Project Link</a>
 										</div>
 									</div>
 								</div>
@@ -110,8 +124,8 @@
 						<i class="fa-solid fa-database"></i> SQL
 						<i class="fa-brands fa-docker"></i> Docker
 						<i class="fa-brands fa-html5"></i> HTML5
-						<p>A purpose built, highly scalable AI assistant designed to help IBS sufferers manage and reduce their symptoms. Running a HTML/JS frontend with a python backend linked through the Flask API, utlising Azure TTS for accessibility, the assistant is packaged with Docker making for easy deployment and scalability, currently deployed via AWS Lightsail.</p>
-						<a class="button style2 fit" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub Project Link</a>
+						<p>An online ticket and sales portal for a fictional cinema. Built as an Agile team of three members, over three sprints of two weeks each. The project consists of a web-based frontend and a Python backend, using the Django REST API. Featuring robust login and user authentication systems, films and tickets etc are added by staff users to an SQL database.</p>
+						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC/UWEFlix-App', '_blank'); return false;">GitHub Project Link</a>
 					</div>
 				</div>
 
@@ -119,17 +133,17 @@
 				<div class="box">
 					<div class="bs-example image fit">
 						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal02" data-toggle="modal"><img id="play-img" src="images/upshot/video_template.jpg"></a>
+						<a href="#VideoModal02" data-toggle="modal"><img id="play-img" src="images/upshot/video_template.jpg"></a>
 						<!-- Modal HTML -->
-						<div id="myModal02" class="modal fade">
+						<div id="VideoModal02" class="modal fade">
 							<div class="modal-dialog modal-xl">
 								<div class="modal-content" style="background-color: #918b7f;">
 									<div class="modal-body">
 										<div class="embed-responsive embed-responsive-16by9">
-											<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630" src="https://www.youtube.com/embed/4QN1ArKdtp8?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											<iframe id="yVideo02" class="embed-responsive-item" width="1040" height="630" src="https://www.youtube.com/embed/4QN1ArKdtp8?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>
 										<div>
-											<a class="button fit" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub Project Link</a>
+											<a class="button fit" onclick=" window.open('https://github.com/AaronEC/UpShot', '_blank'); return false;">GitHub Project Link</a>
 										</div>
 									</div>
 								</div>
@@ -141,8 +155,8 @@
 						<i class="fa-brands fa-swift"></i> Swift
 						<i class="fa-brands fa-app-store-ios"></i> Xcode
 						<i class="fa-brands fa-apple"></i> iOS 15
-						<p>A fully functional app built natively for the iPhone and iOS 15, UpShot is an app to assist archers with training by simulating a tournament against an AI opponent. Complete with full design documentation <a id="link" href="https://drive.google.com/file/d/1_gZSdzXuySuYUuEfvX2l_Y66ix5p-MFu/view?usp=sharing">(available here)</a> and complete ongoing user testing <a id="link" href="https://drive.google.com/file/d/190cCs5cXZPygwzLaW6-Uef7c9H429x_1/view?usp=sharing">(documentation available here)</a> the app is designed to conform to Apple's human interface guidlines with a strong focus on flow and usability.</p>
-						<a class="button style2 fit" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub Project Link</a>
+						<p>A fully functional app built natively for the iPhone and iOS 15, UpShot is an app to assist archers with training by simulating a tournament against an AI opponent. Complete with full design documentation <a id="link" href="https://drive.google.com/file/d/1_gZSdzXuySuYUuEfvX2l_Y66ix5p-MFu/view?usp=sharing">(available here)</a> and complete ongoing user testing <a id="link" href="https://drive.google.com/file/d/190cCs5cXZPygwzLaW6-Uef7c9H429x_1/view?usp=sharing">(documentation available here)</a> the app is designed to conform to Apple's human interface guidelines with a strong focus on flow and usability.</p>
+						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC/UpShot', '_blank'); return false;">GitHub Project Link</a>
 					</div>
 				</div>
 
@@ -150,15 +164,18 @@
 				<div class="box">
 					<div class="bs-example image fit">
 						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal" data-toggle="modal"><img id="play-img" src="images/ibcai/video_template.jpg"></a>
+						<a href="#VideoModal03" data-toggle="modal"><img id="play-img" src="images/ibcai/video_template.jpg"></a>
 						<!-- Modal HTML -->
-						<div id="myModal" class="modal fade">
+						<div id="VideoModal03" class="modal fade">
 							<div class="modal-dialog modal-xl">
 								<div class="modal-content" style="background-color: #918b7f;">
 									<div class="modal-body">
-									  <div class="embed-responsive embed-responsive-16by9">
-										<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630"  src="https://www.youtube.com/embed/lM08q2bJN2s" allowfullscreen></iframe>
-									  </div>
+									  	<div class="embed-responsive embed-responsive-16by9">
+											<iframe id="yVideo03" class="embed-responsive-item" width="1040" height="630"  src="https://www.youtube.com/embed/lM08q2bJN2s" allowfullscreen></iframe>
+									  	</div>
+									  	<div>
+											<a class="button fit" onclick=" window.open('https://github.com/AaronEC/IBCalm-Flask', '_blank'); return false;">GitHub Project Link</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -172,33 +189,16 @@
 						<i class="fa-solid fa-flask"></i> Flask API
 						<i class="fa-brands fa-docker"></i> Docker
 						<i class="fa-brands fa-aws"></i> AWS Lightsail
-						<!-- <img src="https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Code-JS-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Framework-Flask-informational?style=flat&logo=flask&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Platform-Docker-informational?style=flat&logo=docker&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Hosting-AWS-informational?style=flat&logo=amazon&logoColor=white&color=2bbc8a"> -->
 						<p>A purpose built, highly scalable AI assistant designed to help IBS sufferers manage and reduce their symptoms. Running a HTML/JS frontend with a python backend linked through the Flask API, utlising Azure TTS for accessibility, the assistant is packaged with Docker making for easy deployment and scalability, currently deployed via AWS Lightsail.</p>
-						<a class="button style2 fit" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub Project Link</a>
+						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC/IBCalm-Flask', '_blank'); return false;">GitHub Project Link</a>
 					</div>
 				</div>
 
 				<!-- BCOA -->
 				<div class="box">
 					<div class="bs-example image fit">
-						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal" data-toggle="modal"><img id="play-img" src="images/bcoa/video_template.jpg"></a>
-						<!-- Modal HTML -->
-						<div id="myModal" class="modal fade">
-							<div class="modal-dialog modal-xl">
-								<div class="modal-content" style="background-color: #918b7f;">
-									<div class="modal-body">
-									  <div class="embed-responsive embed-responsive-16by9">
-										<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630"  src="https://www.youtube.com/embed/lM08q2bJN2s" allowfullscreen></iframe>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
+
+						<img id="play-img" src="images/bcoa/video_template.jpg">
 					</div>     
 					<div class="inner">
 						<h3>BCOA Club Website</h3>
@@ -206,64 +206,30 @@
 						<i class="fa-brands fa-html5"></i> HTML5
 						<i class="fa-brands fa-codepen"></i> Gatsby
 						<i class="fa-brands fa-react"></i> React
-						<!-- <img src="https://img.shields.io/badge/Code-JS-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Library-React-informational?style=flat&logo=react&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Framework-Gatsby-informational?style=flat&logo=gatsby&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Tools-Azure-informational?style=flat&logo=microsoft&logoColor=white&color=2bbc8a"> -->
-						<p>An informational club website created for my local archery club featuring live news feed and online archery range booking system for club members (powered by Azure). Created with Gatsby for React, to ensure that the site can be deployed as a static website whilst also featuring a live newsfeed which doesn't require direct editing of the HTML files, to ensure ease of use for the clubs committee members.</p>
-						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub</a>
+						<i class="fa-brands fa-microsoft"></i> Azure
+						<p>An informational club website created for a local archery club, featuring a live news feed and online archery range booking system for club members (powered by Azure). Created with Gatsby for React, to ensure that the site can be deployed as a static website whilst also featuring a live newsfeed which doesn't require direct editing of the HTML files, to ensure ease of use for the clubs committee members.</p>
+						<a class="button style2 fit" onclick=" window.open('https://aaronec.github.io/bcoa-site/', '_blank'); return false;">Website Link</a>
 					</div>
 				</div>
 
 				<!-- League Organizer -->
 				<div class="box">
 					<div class="bs-example image fit">
-						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal" data-toggle="modal"><img id="play-img" src="images/tt/video_template.jpg"></a>
-						
-						<!-- Modal HTML -->
-						<div id="myModal" class="modal fade">
-							<div class="modal-dialog modal-xl">
-								<div class="modal-content" style="background-color: #918b7f;">
-									<div class="modal-body">
-									  <div class="embed-responsive embed-responsive-16by9">
-										<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630"  src="https://www.youtube.com/embed/lM08q2bJN2s" allowfullscreen></iframe>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<img id="play-img" src="images/tt/video_template.jpg">
 					</div>     
 					<div class="inner">
 						<h3>League Generator/Organizer</h3>
 						<i class="fa-brands fa-java"></i> Java
 						<i class="fa-brands fa-uikit"></i> JavaFX
-						<!-- <img src="https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Editor-Netbeans-informational?style=flat&logo=apache-netbeans-ide&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Tools-JavaFX-informational?style=flat&logo=javafx&logoColor=white&color=2bbc8a"> -->
-						<p>A comprehensive standalone app for assisting in organising and running a table tennis league. Deployed for use in a real league with over 200 players, the application, developed in Java with a JavaFX front end, has an extensive feature list including; Multiple user support, full database integration, live saving, automated league fixture creation, score and points calculation.</p>
-						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub</a>
+						<p>A comprehensive standalone app for assisting in organising and running a table tennis league. Deployed for use in a real league with over 200 players, the application, developed in Java with a JavaFX front end, has an extensive feature list including multiple user support, full database integration, live saving, automated league fixture creation, score and points calculation. Serialization is utilized to enable persistent data between sessions and users.</p>
+						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC/Table-Tennis-League-Organiser', '_blank'); return false;">GitHub Project Link</a>
 					</div>
 				</div>
 
 				<!-- Web Ref Tools -->
 				<div class="box">
 					<div class="bs-example image fit">
-						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal" data-toggle="modal"><img id="play-img" src="images/ref/video_template.jpg"></a>
-						
-						<!-- Modal HTML -->
-						<div id="myModal" class="modal fade">
-							<div class="modal-dialog modal-xl">
-								<div class="modal-content" style="background-color: #918b7f;">
-									<div class="modal-body">
-									  <div class="embed-responsive embed-responsive-16by9">
-										<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630"  src="https://www.youtube.com/embed/lM08q2bJN2s" allowfullscreen></iframe>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<img id="play-img" src="images/ref/video_template.jpg">
 					</div>     
 					<div class="inner">
 						<h3>Online Referencing Tools</h3>
@@ -273,41 +239,36 @@
 						<i class="fa-solid fa-flask"></i> Flask API
 						<i class="fa-brands fa-docker"></i> Docker
 						<i class="fa-brands fa-aws"></i> AWS Lightsail
-						<!-- <img src="https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Editor-Netbeans-informational?style=flat&logo=apache-netbeans-ide&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Tools-JavaFX-informational?style=flat&logo=javafx&logoColor=white&color=2bbc8a"> -->
-						<p>A comprehensive standalone app for assisting in organising and running a table tennis league. Deployed for use in a real league with over 200 players, the application, developed in Java with a JavaFX front end, has an extensive feature list including; Multiple user support, full database integration, live saving, automated league fixture creation, score and points calculation.</p>
-						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub</a>
+						<p>A standalone set of online tools to assist students and staff with academic referencing in the UWE Harvard style, which is otherwise poorly supported by existing referencing software. The tools allow a user to copy and paste referencing information in BibTex format, parsing and converting this information into both correct and formatted reference and an in-text citation, ready to be copied, in a single button press.</p>
+						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub Project Link</a>
 					</div>
 				</div>
 
 				<!-- Biocomp -->
 				<div class="box">
 					<div class="bs-example image fit">
-						<!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal" data-toggle="modal"><img id="play-img" src="images/bio/video_template.jpg"></a>
-						
-						<!-- Modal HTML -->
-						<div id="myModal" class="modal fade">
-							<div class="modal-dialog modal-xl">
-								<div class="modal-content" style="background-color: #918b7f;">
-									<div class="modal-body">
-										<div class="embed-responsive embed-responsive-16by9">
-										<iframe id="cartoonVideo" class="embed-responsive-item" width="1040" height="630"  src="https://www.youtube.com/embed/lM08q2bJN2s" allowfullscreen></iframe>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<img id="play-img" src="images/bio/video_template.jpg">
 					</div>     
 					<div class="inner">
 						<h3>Rule Based Classifier (Genetic Algorithm)</h3>
 						<i class="fa-brands fa-python"></i> Python
-						<!-- <img src="https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Editor-Netbeans-informational?style=flat&logo=apache-netbeans-ide&logoColor=white&color=2bbc8a">
-						<img src="https://img.shields.io/badge/Tools-JavaFX-informational?style=flat&logo=javafx&logoColor=white&color=2bbc8a"> -->
-						<p>Bespoke Genetic Algorithm coded in Python for use on real world data. Achieved similar error rate to M5Rules algorithm (divide and conquer decision tree) and vastly superior classification when compared to a simple decision table (majority classifier). <a id="link" href="https://drive.google.com/file/d/1bibQarkQ7DlMzsnVughkte6ZZpCh0eQT/view?usp=sharing">Full research paper available here.</a></p>
-						<a class="button style2 fit" onclick=" window.open('https://github.com/AaronEC', '_blank'); return false;">GitHub</a>
+						<p>Bespoke Genetic Algorithm coded in Python for use on real world data with over 8000 data points. Achieved similar error rate to M5Rules algorithm (divide and conquer decision tree) and vastly superior classification when compared to a simple decision table (majority classifier). Full in-depth research paper for this algorithm is available on the link below (see appendix for full source code).</a></p>
+						<a class="button style2 fit" onclick=" window.open('https://drive.google.com/file/d/1bibQarkQ7DlMzsnVughkte6ZZpCh0eQT/view?usp=sharing', '_blank'); return false;">Research Paper Link</a>
+					</div>
+				</div>
+
+				<!-- Claron Wraps -->
+				<div class="box">
+					<div class="bs-example image fit">
+						<img id="play-img" src="images/wraps/video_template.jpg">
+					</div>     
+					<div class="inner">
+						<h3>Claron Wraps Business Website (WIP)</h3>
+						<i class="fa-brands fa-html5"></i> HTML5
+						<i class="fa-brands fa-css3"></i> CSS3
+						<i class="fa-brands fa-js-square"></i> JavaScript
+						<p style="padding-bottom: 60px;">A commercial website being developed for a new branch of an already existing company. Developed as a basic information and overview site, and therefore only using HTML/JS to enable deployment via a static server, it is devised to be easily expandable into an e-commerce website as an when the company growth and subsequent requirements dictate that this is necessary.</a></p>
+						<a class="button style2 fit" onclick=" window.open('https://aaronec.github.io/Claron-Wraps/', '_blank'); return false;">Website Link</a>
 					</div>
 				</div>
 
